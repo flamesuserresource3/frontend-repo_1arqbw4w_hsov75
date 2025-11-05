@@ -1,28 +1,27 @@
-import { useState } from 'react'
+import React from 'react';
+import Header from './components/Header.jsx';
+import Experience from './components/Experience.jsx';
+import Projects from './components/Projects.jsx';
+import Skills from './components/Skills.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen bg-neutral-950 text-neutral-100">
+      <Header />
+
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+        <Experience />
+        <Projects />
+        <Skills />
+      </main>
+
+      <footer className="mt-16 border-t border-neutral-800/60">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl py-8 text-sm text-neutral-400">
+          <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
         </div>
-      </div>
+      </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
