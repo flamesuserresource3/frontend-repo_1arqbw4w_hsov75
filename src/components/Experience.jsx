@@ -2,40 +2,90 @@ import React from 'react';
 
 const roles = [
   {
-    company: 'Acme Corp',
-    role: 'Senior Software Engineer',
-    period: '2022 — Present',
-    location: 'Remote',
+    company: 'Bab Samhan Luxury Collection',
+    role: 'Loss Prevention Supervisor',
+    period: 'Mar 2025 — Present',
+    location: 'Diriyah, Saudi Arabia',
     highlights: [
-      'Led the rebuild of a design system used across 6 product teams, improving delivery speed by 30%.',
-      'Architected a micro-frontend setup to scale independently deployable modules.',
-      'Mentored 5 engineers, introduced testing culture with 85% coverage.'
+      'Led security operations for a 30-person team; resolved conflicts and delivered exceptional customer service to protect assets.',
+      'Patrolled facilities, monitored CCTV and alarms, and controlled access to secured zones.',
+      'Responded to emergencies including medical incidents and fires; conducted drills and administered first aid/CPR.',
+      'Developed and delivered training programs; managed guest disturbances and escorted unauthorized persons.',
+      'Documented incidents and produced comprehensive reports for authorized release while maintaining confidentiality.',
+      'Acted as policy role model and first point of contact for employee concerns; supported management initiatives.',
+      'Awarded Star of the Month (Aug 2025), Heart of the House.'
     ],
-    stack: ['React', 'TypeScript', 'Tailwind', 'Node.js']
+    stack: ['Security Ops', 'CCTV', 'Emergency Response', 'Training']
   },
   {
-    company: 'Globex',
-    role: 'Full‑stack Engineer',
-    period: '2020 — 2022',
-    location: 'Berlin, DE',
+    company: 'Nesma',
+    role: 'Safety Supervisor (Management)',
+    period: '2024 — Feb 2025',
+    location: 'Saudi Arabia',
     highlights: [
-      'Delivered real-time analytics dashboard handling 50k events/min with websockets.',
-      'Designed and implemented role-based access control across the platform.',
-      'Improved Core Web Vitals (LCP < 1.5s) across key pages.'
+      'Performed daily hazard inspections and enforced safety policies, including hazardous-materials regulations.',
+      'Led end-to-end incident investigations; identified root causes and recommended corrective actions.',
+      'Implemented risk control action plans with management to reduce potential safety and security threats.',
+      'Maintained and updated policy documentation; conducted training to promote policy awareness and adherence.',
+      'Analyzed incident trends and security data to drive proactive risk mitigation and informed decisions.',
+      'Developed risk assessment reports and integrated findings into safety protocols to reduce workplace incidents.',
+      'Mentored and coached team members with personalized feedback and skill-building initiatives.',
+      'Led safety initiatives across projects; managed cross-functional teams for operational safety and efficiency.',
+      'Oversaw shift transitions and documented significant safety incidents for continuous improvement.'
     ],
-    stack: ['Next.js', 'Go', 'PostgreSQL', 'Redis']
+    stack: ['Risk Control', 'Policy', 'Training', 'Data Analysis']
   },
   {
-    company: 'Initech',
-    role: 'Frontend Engineer',
-    period: '2018 — 2020',
-    location: 'London, UK',
+    company: 'National Guard Health Affairs (NGHA)',
+    role: 'Tradesmen Supervisor',
+    period: '2017 — 2022',
+    location: 'Saudi Arabia',
     highlights: [
-      'Migrated legacy app to React with TypeScript, reducing bugs by 40%.',
-      'Introduced component-driven development with Storybook.',
-      'Collaborated with design to establish accessible color system (WCAG AA).'
+      'Implemented safety protocols and conducted training sessions to maintain high standards.',
+      'Supervised daily operations ensuring adherence to safety and quality standards; managed a team of technicians.',
+      'Conducted regular safety inspections and audits to maintain regulatory compliance.',
+      'Coordinated maintenance schedules and ensured timely task completion.'
     ],
-    stack: ['React', 'TypeScript', 'Jest', 'Storybook']
+    stack: ['Safety', 'Team Leadership', 'Scheduling']
+  },
+  {
+    company: 'Saudi Aramco',
+    role: 'Mechanical Technician',
+    period: '2007 — 2012',
+    location: 'Saudi Arabia',
+    highlights: [
+      'Maintained and repaired mechanical systems in compliance with company standards.',
+      'Utilized SAP for process optimization, system management, and inventory control.',
+      'Collaborated with engineering teams to troubleshoot and resolve mechanical issues.',
+      'Enhanced operational efficiency through continuous process improvement initiatives.'
+    ],
+    stack: ['Mechanical', 'SAP', 'Process Improvement']
+  },
+  {
+    company: 'Freelance',
+    role: 'International Investor and Stock Market Analyst',
+    period: '2011 — Present',
+    location: 'Various Countries',
+    highlights: [
+      'Conducted in-depth analysis of global financial markets to inform investment strategies.',
+      'Managed a diversified portfolio focused on maximizing returns while mitigating risks.',
+      'Completed advanced financial training programs to enhance analytical skills.',
+      'Developed and executed strategies that led to sustained portfolio growth.'
+    ],
+    stack: ['Financial Modeling', 'Market Analysis', 'Risk Management']
+  },
+  {
+    company: 'Freelance',
+    role: 'Real Estate Broker',
+    period: '2008 — Present',
+    location: 'Saudi Arabia',
+    highlights: [
+      'Licensed broker (FAL# 1100123985); facilitated buying, selling, and leasing transactions.',
+      'Provided market analysis and valuations to support informed client decisions.',
+      'Managed a diverse property portfolio with high standards of service and client satisfaction.',
+      'Built and maintained strong relationships with clients, agents, and legal professionals.'
+    ],
+    stack: ['Brokerage', 'Valuation', 'Client Relations']
   }
 ];
 
@@ -45,7 +95,7 @@ const Experience = () => {
       <div className="max-w-6xl mx-auto">
         <div className="mb-8 sm:mb-10">
           <h2 className="text-2xl sm:text-3xl font-semibold">Experience</h2>
-          <p className="mt-2 text-neutral-400">A snapshot of recent roles and impact.</p>
+          <p className="mt-2 text-neutral-400">Leadership in loss prevention, safety, and risk analytics.</p>
         </div>
 
         <div className="space-y-8">
@@ -65,11 +115,13 @@ const Experience = () => {
                 ))}
               </ul>
 
-              <div className="mt-4 flex flex-wrap gap-2">
-                {job.stack.map((s) => (
-                  <span key={s} className="rounded-full bg-neutral-800/70 px-3 py-1 text-xs text-neutral-300 border border-neutral-700/60">{s}</span>
-                ))}
-              </div>
+              {job.stack?.length > 0 && (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {job.stack.map((s) => (
+                    <span key={s} className="rounded-full bg-neutral-800/70 px-3 py-1 text-xs text-neutral-300 border border-neutral-700/60">{s}</span>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>

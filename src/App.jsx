@@ -17,7 +17,7 @@ function App() {
 
       <footer className="mt-16 border-t border-neutral-800/60">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl py-8 text-sm text-neutral-400">
-          <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Mohammed A. AlMahlaki</p>
         </div>
       </footer>
     </div>

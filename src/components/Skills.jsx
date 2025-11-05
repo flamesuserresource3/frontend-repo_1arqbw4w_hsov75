@@ -2,29 +2,49 @@ import React from 'react';
 
 const categories = [
   {
+    title: 'Technical Tools',
+    items: ['SAP', 'Microsoft Excel', 'Word', 'PowerPoint', 'Thinkcell', 'Visio', 'Project']
+  },
+  {
+    title: 'Financial Analysis',
+    items: ['Financial Modeling', 'Market Analysis', 'Investment Strategies', 'Data Insights']
+  },
+  {
+    title: 'Project Management',
+    items: ['Team Leadership', 'Cross-Functional Collaboration', 'Process Optimization', 'Safety Compliance']
+  },
+  {
+    title: 'Analytical Skills',
+    items: ['Data Analytics', 'Problem-Solving', 'Numerical Accuracy']
+  },
+  {
     title: 'Languages',
-    items: ['TypeScript', 'JavaScript', 'Python', 'Go', 'SQL']
-  },
-  {
-    title: 'Frontend',
-    items: ['React', 'Next.js', 'Tailwind', 'Redux/RTK', 'Jest']
-  },
-  {
-    title: 'Backend',
-    items: ['Node.js', 'FastAPI', 'PostgreSQL', 'MongoDB', 'Redis']
-  },
-  {
-    title: 'DevOps',
-    items: ['Docker', 'CI/CD', 'Vercel', 'AWS', 'Kubernetes']
+    items: ['English (Fluent)', 'Arabic (Fluent)', 'German (Basic)', 'Italian (Basic)', 'Spanish (Basic)', 'Chinese (Basic)', 'Japanese (Basic)']
   }
 ];
 
 const education = [
   {
-    school: 'State University',
-    degree: 'B.Sc. in Computer Science',
-    period: '2014 — 2018'
+    school: 'Saudi Electronic University (SEU)',
+    degree: 'Bachelor of Science in Finance (Expected Graduation: 2026)',
+    period: 'Saudi Arabia'
+  },
+  {
+    school: 'Oregon State University',
+    degree: 'Engineering Studies (2012 — 2017, Incomplete due to family commitments)',
+    period: 'Corvallis, USA'
   }
+];
+
+const certifications = [
+  'Financial Accounting Training',
+  'Change Management and Challenges in Transitioning Government Entities to Accrual-Based Accounting',
+  'Total Quality Management (TQM)',
+  'Lean Six Sigma Black Belt',
+  'Lean Six Sigma Yellow & Green Belt',
+  'Data Analysis using Microsoft Power BI',
+  'Microsoft Excel Fundamentals',
+  'Artificial Intelligence (AI) Fundamentals'
 ];
 
 const Skills = () => {
@@ -32,8 +52,8 @@ const Skills = () => {
     <section id="skills" className="py-14 sm:py-20 border-t border-neutral-800/60">
       <div className="max-w-6xl mx-auto">
         <div className="mb-8 sm:mb-10">
-          <h2 className="text-2xl sm:text-3xl font-semibold">Skills & Education</h2>
-          <p className="mt-2 text-neutral-400">Tech stack and formal training.</p>
+          <h2 className="text-2xl sm:text-3xl font-semibold">Skills, Education & Certifications</h2>
+          <p className="mt-2 text-neutral-400">Core strengths and formal training.</p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
@@ -50,16 +70,27 @@ const Skills = () => {
             ))}
           </div>
 
-          <div className="rounded-xl border border-neutral-800 bg-neutral-900/40 p-6">
-            <h3 className="text-base font-medium">Education</h3>
-            <div className="mt-4 space-y-3">
-              {education.map((e) => (
-                <div key={e.school}>
-                  <p className="font-medium">{e.school}</p>
-                  <p className="text-sm text-neutral-300">{e.degree}</p>
-                  <p className="text-xs text-neutral-500">{e.period}</p>
-                </div>
-              ))}
+          <div className="space-y-6">
+            <div className="rounded-xl border border-neutral-800 bg-neutral-900/40 p-6">
+              <h3 className="text-base font-medium">Education</h3>
+              <div className="mt-4 space-y-4">
+                {education.map((e) => (
+                  <div key={e.school}>
+                    <p className="font-medium">{e.school}</p>
+                    <p className="text-sm text-neutral-300">{e.degree}</p>
+                    <p className="text-xs text-neutral-500">{e.period}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-xl border border-neutral-800 bg-neutral-900/40 p-6">
+              <h3 className="text-base font-medium">Certifications</h3>
+              <ul className="mt-4 list-disc list-inside space-y-2 text-neutral-300 text-sm">
+                {certifications.map((c) => (
+                  <li key={c}>{c}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

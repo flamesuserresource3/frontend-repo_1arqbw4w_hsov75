@@ -1,30 +1,24 @@
 import React from 'react';
-import { Github, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Design System Kit',
+    title: 'Entrepreneurial Ventures',
     description:
-      'A fully themable React component kit with tokens, docs, and accessible primitives.',
-    tags: ['React', 'TypeScript', 'Tailwind', 'Vite'],
-    github: 'https://github.com/yourhandle/design-system-kit',
-    demo: 'https://design-kit.example.com'
+      'Founded and managed several businesses in Jeddah, Madinah, Riyadh, and Cairo; successfully scaled operations and exited for profit.',
+    tags: ['Operations', 'P&L', 'Growth', 'Exit Strategy']
   },
   {
-    title: 'Realtime Analytics',
+    title: 'Investment Portfolio Strategy',
     description:
-      'Stream processing pipeline and dashboard to visualize business events in real time.',
-    tags: ['Next.js', 'WebSockets', 'Redis', 'Docker'],
-    github: 'https://github.com/yourhandle/realtime-analytics',
-    demo: 'https://analytics.example.com'
+      'Long-term, risk-adjusted equity and real estate portfolio with disciplined market analysis and continuous learning.',
+    tags: ['Financial Analysis', 'Risk Management', 'Asset Allocation']
   },
   {
-    title: 'TaskFlow',
+    title: 'Safety & Compliance Training Programs',
     description:
-      'Opinionated task manager with keyboard-first UX and offline support.',
-    tags: ['PWA', 'Service Worker', 'IndexedDB'],
-    github: 'https://github.com/yourhandle/taskflow',
-    demo: 'https://taskflow.example.com'
+      'Developed and delivered safety training and incident response drills across teams to improve compliance and readiness.',
+    tags: ['Training', 'Policy', 'Incident Response']
   }
 ];
 
@@ -33,8 +27,8 @@ const Projects = () => {
     <section id="projects" className="py-14 sm:py-20 border-t border-neutral-800/60">
       <div className="max-w-6xl mx-auto">
         <div className="mb-8 sm:mb-10">
-          <h2 className="text-2xl sm:text-3xl font-semibold">Selected Projects</h2>
-          <p className="mt-2 text-neutral-400">Highlights from recent work and experiments.</p>
+          <h2 className="text-2xl sm:text-3xl font-semibold">Projects & Initiatives</h2>
+          <p className="mt-2 text-neutral-400">Selected initiatives reflecting leadership, analysis, and execution.</p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -49,23 +43,8 @@ const Projects = () => {
                 ))}
               </div>
 
-              <div className="mt-5 flex items-center gap-3 text-sm">
-                <a
-                  href={p.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1 text-neutral-300 hover:text-white"
-                >
-                  <Github size={16} /> Code
-                </a>
-                <a
-                  href={p.demo}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1 text-neutral-300 hover:text-white"
-                >
-                  <ExternalLink size={16} /> Demo
-                </a>
+              <div className="mt-5 flex items-center gap-3 text-sm text-neutral-400">
+                <span className="inline-flex items-center gap-1"><ExternalLink size={16} /> Details available on request</span>
               </div>
             </div>
           ))}
